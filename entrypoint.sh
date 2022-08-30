@@ -1,3 +1,5 @@
-#!/bin/bash
+#!/bin/bash -l
 
-ls $1
+echo "branch $1"
+echo "test $2"
+ls $2
