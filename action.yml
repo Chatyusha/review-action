@@ -12,7 +12,8 @@ inputs:
     default: "./"
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.path }}
+  using: 'composite'
+  steps:
+    - run: gem install review
+    - run: gem install bundler
+    - run: ./entrypoint.sh ${{ inputs.branch }} ${{ inputs.path }}
