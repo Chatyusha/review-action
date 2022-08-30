@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN apt update && apt upgrade -y
 
-RUN apt install -y sudo git
+RUN apt install -y sudo
 
 ARG USERNAME=review
 ARG PASSWORD=review

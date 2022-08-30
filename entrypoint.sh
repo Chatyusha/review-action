@@ -1,9 +1,6 @@
 #!/bin/bash -l
 
-branch="$1"
-path="$2"
-
-git checkout $branch
+path="$1"
 
 cd $path
 

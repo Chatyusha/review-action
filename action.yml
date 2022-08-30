@@ -15,5 +15,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.branch }}
     - ${{ inputs.path }}
