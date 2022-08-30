@@ -9,5 +9,5 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Hello world action step
+      - name: Test Review Build Job
         uses: ./ # Uses an action in the root directory
