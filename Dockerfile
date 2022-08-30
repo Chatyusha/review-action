@@ -26,3 +26,5 @@ RUN apt install texlive-fonts-extra \
 RUN apt install ruby
 RUN gem install bundler
 RUN gem install review
+
+ENTRYPOINT ["./entrypoint.sh"]
