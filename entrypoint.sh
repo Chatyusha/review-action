@@ -1,6 +1,12 @@
 #!/bin/bash -l
 
-echo "branch $1"
-echo "test $2"
+branch="$1"
+path="$2"
 
-ls $1
+git checkout $branch
+
+cd $path
+
+bundle exec review-preproc -r --tabwidth=2 *.re
+bundle exec review-pdfmaker config.yml
+

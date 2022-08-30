@@ -5,7 +5,7 @@ inputs:
   branch:
     description: 'target branch name'
     required: true
-    default: master
+    default: 'master'
   path:
     description: 'the path of document root'
     required: true
