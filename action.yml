@@ -15,5 +15,8 @@ runs:
   using: 'composite'
   steps:
     - run: gem install review
+      shell: bash
     - run: gem install bundler
+      shell: bash
     - run: ./entrypoint.sh ${{ inputs.branch }} ${{ inputs.path }}
+      shell: bash
