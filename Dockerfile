@@ -18,10 +18,10 @@ ENV TZ Asia/Tokyo
 ENV LANG ja_JP.UTF-8
 ENV LANGUAGE ja_JP:ja
 
-RUN apt install texlive-fonts-extra \
-                texlive-fonts-recommended \
-                texlive-lang-cjk \
-                xdvik-ja -y
+RUN apt install -y \
+        texlive-lang-japanese \
+        texlive-latex-recommended \
+        texlive-fonts-extra
 
 RUN apt install ruby
 RUN gem install bundler
