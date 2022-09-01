@@ -3,13 +3,10 @@ description: 'ReView Builder for Github Actions'
 
 inputs:
   branch:
-    description: 'target branch name'
-    required: true
-    default: 'master'
   path:
     description: 'the path of document root'
-    required: true
-    default: "./"
+    required: false
+    default: "sample"
 
 runs:
   using: 'docker'
