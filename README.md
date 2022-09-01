@@ -11,6 +11,28 @@ If you want to know more about `Re:View`, please see the original repository,
 
 ## Usage
 
+### Basic
+
+e.g.)
+The path of document root is `./sample`
+
+```.github/workflows/buildbook.yml
+name: ci
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Book
+        uses: Chatyusha/review-action@v1
+        with:
+          path: sample
+```
+
 ## Args
 
 ## Quick Start
