@@ -6,7 +6,7 @@ inputs:
   path:
     description: 'the path of document root'
     required: true
-    default: "./sample"
+    default: "./"
 
 runs:
   using: 'docker'
