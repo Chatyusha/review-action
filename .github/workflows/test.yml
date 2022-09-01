@@ -9,12 +9,10 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
-
       - name: Test Review Build Job
         uses: ./ # Uses an action in the root directory
         with:
-          path: "sample"
-
+          path: sample
       - name: docker logs save 2
         uses: actions/upload-artifact@v2
         with:
