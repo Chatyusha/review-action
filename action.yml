@@ -5,7 +5,7 @@ inputs:
   branch:
   path:
     description: 'the path of document root'
-    required: false
+    required: true
     default: "sample"
 
 runs:
