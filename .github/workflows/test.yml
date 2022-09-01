@@ -12,9 +12,9 @@ jobs:
       - name: Test Review Build Job
         uses: ./ # Uses an action in the root directory
         with:
-          path: sample
+          path: review-template/articles
       - name: docker logs save 2
         uses: actions/upload-artifact@v2
         with:
           name: book
-          path: ./sample/book.pdf 
+          path: ./review-template/articles/book.pdf
