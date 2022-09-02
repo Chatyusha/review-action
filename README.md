@@ -36,3 +36,15 @@ jobs:
 ## Args
 
 ## Quick Start
+
+## License
+
+Main part of Re:VIEW is applied GNU Lesser General Public License (LGPL). See [licenses/review](./licenses/review) file.
+
+Exception:
+
+* doc/, sample/: MIT License. See [licenses/doc-sample](licenses/doc-sample) file.
+* jumoline.sty
+* plisting.sty
+* gentomhow.sty
+* jsbook.cls
