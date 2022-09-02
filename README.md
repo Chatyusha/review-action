@@ -33,6 +33,33 @@ jobs:
           path: sample
 ```
 
+### Artifacts
+
+```yml
+name: ci
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build Book and Upload Artifacts
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build Review Article
+        uses: Chatyusha/review-action@v1
+        with:
+          path: sample
+      - name: Upload PDF
+        uses: actions/upload-artifact@v2
+        with:
+          name: book
+          path: sample/book.pdf
+```
+
 ## Args
 
 `path`: The path from current directory to document root
