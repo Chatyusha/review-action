@@ -1,6 +1,7 @@
 name: 'RiView Builder'
 description: 'ReView Builder for Github Actions'
 icon: book
+color: red
 
 inputs:
   branch:
