@@ -1,5 +1,9 @@
 name: 'ReView Builder'
 description: 'ReView Builder for Github Actions'
+author: Chatyusha
+branding:
+  icon: book
+  color: red
 
 inputs:
   branch:
