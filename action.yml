@@ -1,4 +1,4 @@
-name: 'RiView Builder'
+name: 'ReView Builder'
 description: 'ReView Builder for Github Actions'
 
 inputs:
