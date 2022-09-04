@@ -6,17 +6,18 @@ branding:
   color: red
 
 inputs:
-  branch:
-    description: 'target branch name'
-    required: true
-    default: 'master'
   path:
     description: 'the path of document root'
     required: true
     default: "./"
+  type:
+    description: 'the type of document'
+    required: true
+    default: 'pdf'
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.path }}
+    - ${{ inputs.type }}
