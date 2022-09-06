@@ -1,6 +1,6 @@
-# Review Actions
+# Re:View Action
 
-## What is "ReView"
+## What is "Re:VIEW"
 
 > Re:VIEW is an easy-to-use digital publishing system for paper books and ebooks. 
 –– ([@kmuto](https://github.com/kmuto),the developer of [Re:View](https://github.com/kmuto/review))
