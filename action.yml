@@ -10,6 +10,10 @@ inputs:
     description: 'the path of document root'
     required: true
     default: "./"
+  outdir:
+    description: 'directory path to save the built document (relative path from `path`)'
+    required: true
+    default: "./artifacts"
   type:
     description: 'the type of document'
     required: true
@@ -20,4 +24,5 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.path }}
+    - ${{ inputs.outdir }}
     - ${{ inputs.type }}
