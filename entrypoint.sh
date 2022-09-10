@@ -1,5 +1,7 @@
 #!/bin/bash -l
 
+set -e
+
 path="$1"
 outdir="$2"
 #arttypes
