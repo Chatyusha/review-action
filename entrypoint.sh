@@ -15,6 +15,8 @@ if [ ! -d "$outdir" ];then
 fi
 
 bookname=$(grep "^bookname: " config.yml | sed 's/^bookname: //')
+
+bundle install
 bundle exec review-preproc -r --tabwidth=2 *.re
 
 IFS=","
