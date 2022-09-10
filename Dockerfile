@@ -10,6 +10,8 @@ ARG PASSWORD=review
 RUN useradd -m -s /bin/bash -G sudo $USERNAME
 RUN echo $USERNAME:$PASSWORD | chpasswd
 
+COPY "./entrypoint.sh" "/usr/bin/entrypoint"
+
 RUN apt install -y tzdata locales
 
 RUN locale-gen ja_JP.UTF-8
@@ -27,6 +29,5 @@ RUN apt install ruby
 RUN gem install bundler
 RUN gem install review
 
-COPY "./entrypoint.sh" "/user/bin/entrypoint"
 
 ENTRYPOINT ["entrypoint"]
