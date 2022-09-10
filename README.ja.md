@@ -9,7 +9,8 @@
 
 ### 基本的な使い方
 
-例ではドキュメントルートを`./sample`にしています。
+例ではドキュメントルートを`./sample`に、成果物を出力するディレクトリを
+`./sample/artifacts`、ドキュメントのタイプを`pdf`と`web`にしています。
 
 ```.github/workflows/buildbook.yml
 name: ci
@@ -23,9 +24,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Book
-        uses: Chatyusha/review-action@v1
+        uses: Chatyusha/review-action@v2.0
         with:
           path: sample
+          outdir: artifacts
+          type: "pdf,web"
 ```
 
 ### ビルドした本を成果物としてアップロード
@@ -45,19 +48,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Build Review Article
-        uses: Chatyusha/review-action@v1
+        uses: Chatyusha/review-action@v2.0
         with:
           path: sample
-      - name: Upload PDF
+          outdir: "artifacts"
+          type: "pdf,web"
+
+      - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: book
-          path: sample/book.pdf
+          name: books
+          path: "sample/artifacts"
 ```
 
 ## 変数
 
 `path` : 現在地からドキュメントルートへの相対パス
+`outdir` : 成果物を出力するディレクトリのパス。`path`からの相対パスで指定する
+`type` : 出力するドキュメントのタイプ。*pdf,epub,web*などがある。
 
 ## License
 
