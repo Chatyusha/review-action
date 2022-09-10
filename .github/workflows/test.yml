@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Build Review Article
-        uses: Chatyusha/review-action@v1
+        uses: Chatyusha/review-action@v1.0
         with:
           path: sample
           outdir: "./artifacts"
