@@ -13,11 +13,11 @@ jobs:
         uses: ./
         with:
           path: sample
-          outdir: "./artifacts"
+          outdir: "sample/artifacts"
           type: "pdf,web"
 
       - name: Upload PDF
         uses: actions/upload-artifact@v2
         with:
           name: books
-          path: "artifacts"
+          path: "sample/artifacts"
