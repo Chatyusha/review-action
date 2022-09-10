@@ -21,3 +21,18 @@ jobs:
         with:
           name: books
           path: "sample/artifacts"
+          
+  usetest:
+    runs-on: ubuntu-latest
+    name: test job2
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build Review Article
+        uses: Chatyusha/review-action@v2.0
+        with:
+          path: sample
+          outdir: "artifacts"
+          type: "pdf,web"
