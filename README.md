@@ -1,4 +1,4 @@
-# Re:View Action
+# Re:VIEW Action
 
 ## What is "Re:VIEW"
 
