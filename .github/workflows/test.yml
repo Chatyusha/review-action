@@ -13,7 +13,7 @@ jobs:
         uses: ./
         with:
           path: sample
-          outdir: "sample/artifacts"
+          outdir: "artifacts"
           type: "pdf,web"
 
       - name: Upload PDF
