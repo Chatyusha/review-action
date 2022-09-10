@@ -68,9 +68,9 @@ jobs:
 
 ## Args
 
-`path`: The path from current directory to document root
-`outdir`: The path of *output_directory*
-`type`: The types of document,for example,*pdf,epub,web ...*
+* `path`: The path from current directory to document root
+* `outdir`: The path of *output_directory*
+* `type`: The types of document,for example,*pdf,epub,web ...*
 
 ## License
 
