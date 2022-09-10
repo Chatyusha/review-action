@@ -27,4 +27,6 @@ RUN apt install ruby
 RUN gem install bundler
 RUN gem install review
 
-ENTRYPOINT ["./entrypoint.sh"]
+COPY "./entrypoint.sh" "/user/bin/entrypoint"
+
+ENTRYPOINT ["entrypoint"]
