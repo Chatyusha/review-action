@@ -14,7 +14,8 @@ If you want to know more about *Re:View*, please see the original repository,
 ### Basic
 
 e.g.)
-The path of document root is `./sample`
+The path of document root is `./sample`,output directory is `./artifacts`
+and document-types are `pdf` and `web`.
 
 ```.github/workflows/buildbook.yml
 name: ci
@@ -28,9 +29,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Book
-        uses: Chatyusha/review-action@v1
+        uses: Chatyusha/review-action@v2
         with:
           path: sample
+          outdir: "./artifacts"
+          type: "pdf,web"
 ```
 
 ### Artifacts
@@ -53,11 +56,14 @@ jobs:
         uses: Chatyusha/review-action@v1
         with:
           path: sample
+          outdir: "./artifacts"
+          type: "pdf,web"
+
       - name: Upload PDF
         uses: actions/upload-artifact@v2
         with:
-          name: book
-          path: sample/book.pdf
+          name: books
+          path: "artifacts"
 ```
 
 ## Args
