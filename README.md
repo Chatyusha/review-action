@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Book
-        uses: Chatyusha/review-action@v2.0
+        uses: Chatyusha/review-action@2.0
         with:
           path: sample
           outdir: artifacts
@@ -53,7 +53,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Build Review Article
-        uses: Chatyusha/review-action@v2.0
+        uses: Chatyusha/review-action@2.0
         with:
           path: sample
           outdir: "artifacts"
